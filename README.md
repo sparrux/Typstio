@@ -1,10 +1,10 @@
 # Typstio
 
-Библиотека генерации и компиляции `Typst` кода. Основным компонентом является `ContentWriter`, который аггрегирует в себе все визуальные элементы (текст, таблицы, блоки и др). Благодаря этому, можно ввести в ваши проекты механизм генерации отчетов, расписаний, списков и много чего еще.
+A library for generating and compiling `Typst` code. Its core component is `ContentWriter`, which aggregates all visual elements (text, tables, blocks, etc.). This enables seamless integration of report, schedule, list, and other document generation capabilities into your projects.
 
-Логика описания вашего документа 1 в 1 повторяет написание на `Typst`, сохраняется та же линейность, что не составит труда освоить использование этого решения знающим `Typst` разработчикам.
+The document description logic mirrors `Typst` syntax one-to-one, preserving the same linear structure. As a result, developers familiar with Typst can adopt this solution with minimal effort.
 
-## Пример
+### Sample
 
 ```C#
 var document = new ContentWriter();
@@ -36,26 +36,6 @@ Table CreateUserTable()
 }
 ```
 
-Результат:
+#### Output
 
 ![Sample-1](./static/sample1.png)
-
----
-
-# UI TODO
-
-**Легкий, простой, резвый, интуитивный и понятный интерфейс** - вот как хочется описать то, чего пока нет, но чего хочется. 
-
-Разрабатывая решение `Typstio`, меня закономерно посетила мысль о написании небольшого приложения для PC, которое бы позволило применить непосредственно мои наработки, а так же придать им визуальный окрас и функциональность. Например, небольшой генератор отчетов или документов с привязкой данных, провайдерами баз данных и пользовательскими визуальными настройками. 
-
-Далее хочу показать небольшой архитектурный план, по которому я бы осмелился реализовать мою задумку, но не уверен, дойдут ли руки.
-
-![](./static/Plan.jpg)
-
-### Стек, отрисовка и привязка
-
-Стэк для PC прост: `WPF, Prism, MahApps, RX`.
-
-Верстка документа и привязка данных через `WPF` компоненты, которые после конвертируются в `Typstio` и затем компилируются в `Typst`, а затем в `PDF`.
-
-
