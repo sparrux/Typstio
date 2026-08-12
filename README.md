@@ -4,7 +4,7 @@ A library for generating and compiling `Typst` code. Its core component is `Cont
 
 The document description logic mirrors `Typst` syntax one-to-one, preserving the same linear structure. As a result, developers familiar with Typst can adopt this solution with minimal effort.
 
-### Sample
+### Usage Sample
 
 ```C#
 var document = new ContentWriter();
@@ -35,7 +35,3 @@ Table CreateUserTable()
     return new Table(("auto", "1fr", "1fr"), items, inset: "10pt", align: "horizon");
 }
 ```
-
-#### Output
-
-![Sample-1](./static/sample1.png)
